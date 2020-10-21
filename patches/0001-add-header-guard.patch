@@ -1,0 +1,31 @@
+From f03784b6c1c9f0eff925f0aaef5c401edc2cc40c Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:11:37 +0200
+Subject: [PATCH 1/2] add header guard
+
+The current implementation does not contain guard and it works well,
+but it may lead to problems in the future.
+
+Signed-off-by: Sergii Piatakov <sergii.piatakov@globallogic.com>
+---
+ calculator.h | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/calculator.h b/calculator.h
+index 6b87fdc..5813ec9 100644
+--- a/calculator.h
++++ b/calculator.h
+@@ -1,5 +1,10 @@
++#ifndef CALCULATOR_H
++#define CALCULATOR_H
++
+ class Calculator
+ {
+     public:
+         int Add (int, int);
+ };
++
++#endif//CALCULATOR_H
+-- 
+2.24.1.windows.2
+
